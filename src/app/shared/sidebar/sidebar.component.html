@@ -1,0 +1,19 @@
+<aside class="sidebar-container">
+    <!-- Header -->
+    <div class="sidebar-header">
+        <h2>Rental Manager</h2>
+        <span>Property Management System</span>
+    </div>
+
+    <!-- Nav Links -->
+    <nav class="sidebar-links">
+        @for (item of menuItems; track item) {
+            <a class="sidebar-link-item" 
+                (click)="selectMenuItem(item)" 
+                ngClass="{{item.isOpen ? 'active' : ''}}">
+                <img src={{item.icon}} alt={{item.label}} class="icon">
+                <span>{{item.label}}</span>
+            </a>
+        }
+    </nav>
+</aside>

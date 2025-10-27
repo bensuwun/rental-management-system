@@ -1,0 +1,63 @@
+@import "../styles/colors";
+
+@mixin sidebar-margin {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20rem;
+    gap: 20px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $background-color-primary;
+    overflow-x: hidden;
+    padding-top: 30px;
+    transition: 0.5s;
+    color: white;
+}
+
+.sidebar-header {
+    @include sidebar-margin();
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.sidebar-links {
+    @include sidebar-margin();
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.sidebar-link-item {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &.active {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-left: 4px solid #ffffff;
+    }
+}
+
+.icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    stroke: white;
+}

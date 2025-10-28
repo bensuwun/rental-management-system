@@ -8,7 +8,8 @@
     <!-- Nav Links -->
     <nav class="sidebar-links">
         @for (item of menuItems; track item) {
-            <a class="sidebar-link-item" 
+            <a class="sidebar-link-item"
+                [routerLink]="item.route"
                 (click)="selectMenuItem(item)" 
                 ngClass="{{item.isOpen ? 'active' : ''}}">
                 <img src={{item.icon}} alt={{item.label}} class="icon">

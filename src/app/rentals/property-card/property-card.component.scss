@@ -1,0 +1,48 @@
+@use "card";
+
+.property-card-container {
+    min-width: 15rem;
+}
+
+.property-card-top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    font-size: 1rem;
+
+    .header {
+        font-weight: bold;
+    }
+}
+
+.property-card-bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.5rem;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    border: 1px solid lightgray;
+    font-size: 0.875rem;
+
+    .label {
+        color: gray;
+        margin-right: 2rem;
+    }
+
+    .value {
+        font-weight: 500;
+    }
+}
+
+.property-card-label-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

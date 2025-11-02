@@ -1,8 +1,14 @@
+@use "colors";
+@use "sidebar_values";
+
 .app-container {
     display: flex;
     height: 100vh;
+    background-color: colors.$background-color-secondary;
 }
 
 .app-content {
-    margin-left: 20rem; /* Width of the sidebar */
+    width: 100%;
+    margin-left: sidebar_values.$sidebar-width;
+    background-color: colors.$background-color-secondary;
 }

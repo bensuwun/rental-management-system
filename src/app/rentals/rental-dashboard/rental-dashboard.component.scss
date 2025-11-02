@@ -1,0 +1,31 @@
+@use "layout";
+@use "card";
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    @include layout.section-margin;
+}
+
+.dashboard-properties-container {
+    @include card.card-boxshadow-style
+}
+
+.properties-header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.dashboard-properties-header-divider {
+    height: 1px;
+    border-bottom: 1px solid lightgray;
+}
+
+.dashboard-properties-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: start;
+    padding: 1rem;
+}

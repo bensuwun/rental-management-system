@@ -1,6 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
-@import './normalize.scss';
+/* You can add global styles to this file, and also use other style files */
+@use './normalize.scss';
 
 body {
     font-family: 'Inter', sans-serif;
 }
+
+h2 {
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+

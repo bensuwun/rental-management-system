@@ -1,4 +1,5 @@
-@import "../styles/colors";
+@use "colors";
+@use "sidebar_values";
 
 @mixin sidebar-margin {
     margin-left: 1rem;
@@ -9,13 +10,13 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 20rem;
+    width: sidebar_values.$sidebar-width;
     gap: 20px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: $background-color-primary;
+    background-color: colors.$background-color-primary;
     overflow-x: hidden;
     padding-top: 30px;
     transition: 0.5s;
@@ -27,6 +28,10 @@
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+}
+
+.sidebar-header-subtitle {
+    color: colors.$text-color-sidebar-subtitle;
 }
 
 .sidebar-links {

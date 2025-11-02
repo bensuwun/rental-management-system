@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also use other style files */
 @use './normalize.scss';
+@use "buttons";
+@use "colors";
 
 body {
     font-family: 'Inter', sans-serif;
@@ -10,3 +12,12 @@ h2 {
     font-weight: 400;
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}

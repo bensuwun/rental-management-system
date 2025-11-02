@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, Event, RouterEvent, RouterOutlet } from '@angular/router';
+import { Router, Event, RouterEvent, RouterOutlet, ActivatedRoute } from '@angular/router';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { filter } from 'rxjs';
@@ -19,13 +19,14 @@ export class AppComponent {
   isSidebarCollapsed = false;
   navbarTitle = "Dashboard";
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
     router.events.pipe(
        filter((e: Event | RouterEvent): e is RouterEvent => e instanceof RouterEvent)
     ).subscribe((e: RouterEvent) => {
       // Change the title based on the current route.
-      console.log('Router event:', e);
-      console.log('Navigated to:', e.url);
       if (e.url === '/rentals') {
         this.navbarTitle = 'Rentals';
       } else if (e.url === '/payments') {

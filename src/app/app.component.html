@@ -1,6 +1,9 @@
 <div class="app-container">
   <!-- Sidebar -->
-  <app-sidebar></app-sidebar>
+  <app-sidebar 
+    [activeRoute]="navbarTitle"
+    [isSidebarCollapsed]="isSidebarCollapsed">
+  </app-sidebar>
 
   <!-- Content -->
   <main class="app-content">

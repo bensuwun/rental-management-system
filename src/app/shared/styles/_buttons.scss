@@ -1,0 +1,31 @@
+@use "colors";
+
+@mixin button-style {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 0.8rem;
+}
+
+.primary-filled-btn {
+    @include button-style;
+    background-color: colors.$primary-button-color;
+    color: white;
+
+    &:hover {
+        background-color: colors.$primary-button-color-hover;
+    }
+}
+
+.gray-filled-btn {
+    @include button-style;
+    background-color: colors.$gray-filled-btn-color;
+    color: black;
+
+    &:hover {
+        background-color: colors.$gray-filled-btn-color-hover;
+    }
+}

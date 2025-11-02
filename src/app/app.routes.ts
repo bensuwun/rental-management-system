@@ -1,16 +1,17 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RentalDashboardComponent } from './rentals/rental-dashboard/rental-dashboard.component';
 
 export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
+        title: "Dashboard",
         component: DashboardComponent,
-        title: "Dashboard"
     },
     {
         path: 'rentals',
-        loadChildren: () => import('./rentals/rentals.module').then(m => m.RentalsModule)
+        loadChildren: () => import('./rentals/rentals.module').then(m => m.RentalsModule),
     },
     {
         path: 'payments',

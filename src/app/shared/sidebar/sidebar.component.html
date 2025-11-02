@@ -11,7 +11,7 @@
             <a class="sidebar-link-item"
                 [routerLink]="item.route"
                 (click)="selectMenuItem(item)" 
-                ngClass="{{item.isOpen ? 'active' : ''}}">
+                ngClass="{{item.label === activeRoute ? 'active' : ''}}">
                 <img src={{item.icon}} alt={{item.label}} class="icon">
                 <span>{{item.label}}</span>
             </a>

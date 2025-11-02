@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { provideRouter, RouterModule, Routes } from '@angular/router';
 import { RentalDashboardComponent } from './rental-dashboard/rental-dashboard.component';
 
 const routes: Routes = [
   {
     path: "",
     pathMatch: "full",
+    title: "Rentals",
     component: RentalDashboardComponent
   }
 ];

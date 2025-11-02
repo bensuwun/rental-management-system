@@ -13,8 +13,20 @@
 
 .properties-header-container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 1rem;
+}
+
+.properties-header-buttons {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.icon {
+    height: 1rem;
+    width: 1rem;
 }
 
 .dashboard-properties-header-divider {
@@ -23,9 +35,8 @@
 }
 
 .dashboard-properties-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
-    justify-content: start;
     padding: 1rem;
 }

@@ -2,6 +2,11 @@
 
 .property-card-container {
     min-width: 15rem;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    border: 1px solid lightgray;
 }
 
 .property-card-top-section {
@@ -9,15 +14,20 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
-    border-top-left-radius: 0.75rem;
-    border-top-right-radius: 0.75rem;
-    border-top: 1px solid lightgray;
-    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;
+
     font-size: 1rem;
 
     .header {
         font-weight: 500;
+    }
+
+    .chip-occupied {
+        padding: 0.4rem;
+        border-radius: 0.5rem;
+        background-color: rgb(220 252 231);
+        color: rgb(22 101 52);
+        font-size: 0.75rem;
+        line-height: 1;
     }
 }
 
@@ -26,9 +36,8 @@
     flex-direction: column;
     gap: 0.4rem;
     padding: 0.5rem;
-    border-bottom-left-radius: 0.75rem;
-    border-bottom-right-radius: 0.75rem;
-    border: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     font-size: 0.875rem;
 
     .label {
@@ -39,10 +48,16 @@
     .value {
         font-weight: 500;
     }
+
+    .property-card-label-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
-.property-card-label-item {
+.property-card-controls {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 0.5rem;
 }

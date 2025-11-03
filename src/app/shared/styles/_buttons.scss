@@ -29,3 +29,15 @@
         background-color: colors.$gray-filled-btn-color-hover;
     }
 }
+
+.text-btn {
+    border: none;
+    color: colors.$primary-button-color;
+    background-color: transparent;
+    font-size: 0.8rem;
+    cursor: pointer;
+
+    &:hover {
+        color: colors.$primary-button-color-hover;
+    }
+}
